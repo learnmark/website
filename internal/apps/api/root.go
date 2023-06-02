@@ -11,11 +11,11 @@ import (
 	"os"
 )
 
-var Home = home{}
+var Root = root{}
 
-type home struct{}
+type root struct{}
 
-func (c *home) Home(ctx *gin.Context) {
+func (c *root) Root(ctx *gin.Context) {
 	s := sv.Context(ctx)
 	con := entities.Consultant{
 		Name: "demo-go",
@@ -43,7 +43,7 @@ func (c *home) Home(ctx *gin.Context) {
 	}
 	fmt.Println(wilson)
 
-	f, err := os.Create("./data/evaluation/" + uuid.NewString() + ".yaml")
+	f, err := os.Create("./data/evaluation/microservices/" + uuid.NewString() + ".yaml")
 
 	if err != nil {
 		log.Fatal(err)

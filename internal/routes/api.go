@@ -8,5 +8,5 @@ import (
 func RegisterWebsiteRoute(engine *gin.Engine) {
 	group := engine.Group("/")
 
-	group.GET("/", api.Home.Home)
+	group.GET("/", api.Root.Root)
 }
