@@ -20,5 +20,7 @@ assets/upload/*
 tools/comp-img/.idea
 tools/comp-img/venv
 tools/comp-img/imgs
-dist/golang-gin-project-layout
-golang-gin-project-layout
+dist/website
+website
+
+data/evaluation/microservices/*.yaml

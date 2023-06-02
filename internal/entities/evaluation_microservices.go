@@ -1,14 +1,14 @@
 package entities
 
 type EvaluationMicroservices struct {
-	Entity
-	CompanyName            string
+	Base
+	CompanyName            string `yaml:"companyName"`
 	Email                  string
 	ViewCode               string
 	AppName                string
 	SourceCodeAccessible   bool
 	SourceCodeMaintainable bool
-	VenderSupportStatus    string
+	VendorSupportStatus    string
 	ContainerizationStatus string
 	UseKubernetes          bool
 	IterationPerMonth      int

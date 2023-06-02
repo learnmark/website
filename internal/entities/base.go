@@ -4,7 +4,7 @@ import (
 	"time"
 )
 
-type Entity struct {
+type Base struct {
 	UUID      string
 	DeletedAt time.Time
 	CreatedAt time.Time
