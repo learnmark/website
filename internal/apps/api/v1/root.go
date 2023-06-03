@@ -5,18 +5,18 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"
 	"github.com/learnmark/website/internal/entities"
-	sv "github.com/learnmark/website/internal/services"
+	"github.com/learnmark/website/internal/services"
 	"gopkg.in/yaml.v3"
 	"log"
 	"os"
 )
 
-var V1Root = v1Root{}
+var Root = root{}
 
-type v1Root struct{}
+type root struct{}
 
-func (c *v1Root) Root(ctx *gin.Context) {
-	s := sv.Context(ctx)
+func (c *root) Root(ctx *gin.Context) {
+	s := services.Context(ctx)
 	con := entities.Consultant{
 		Name: "demo-go",
 		Base: entities.Base{

@@ -3,50 +3,51 @@ package entities
 type EvaluationMicroservices struct {
 	Base
 	CompanyName            string `yaml:"companyName"`
-	Email                  string
-	ViewCode               string
-	AppName                string
-	SourceCodeAccessible   bool
-	SourceCodeMaintainable bool
-	VendorSupportStatus    string
-	ContainerizationStatus string
-	UseKubernetes          bool
-	IterationPerMonth      int
+	Email                  string `yaml:"email"`
+	ViewCode               string `yaml:"viewCode"`
+	AppName                string `yaml:"appName"`
+	SourceCodeAccessible   bool   `yaml:"sourceCodeAccessible"`
+	SourceCodeMaintainable bool   `yaml:"sourceCodeMaintainable"`
+	VendorSupportStatus    string `yaml:"vendorSupportStatus"`
+	ContainerizationStatus string `yaml:"containerizationStatus"`
+	UseKubernetes          bool   `yaml:"useKubernetes"`
+	IterationPerMonth      int    `yaml:"iterationPerMonth"`
 
-	BackendLanguage               string
-	BackendFramework              string
-	EastWestCommunicationProtocol string
+	BackendLanguage               string `yaml:"backendLanguage"`
+	BackendFramework              string `yaml:"backendFramework"`
+	EastWestCommunicationProtocol string `yaml:"eastWestCommunicationProtocol"`
 
-	UseRegistry     bool
-	RegistryType    string
-	RegistryVersion string
+	UseRegistry     bool   `yaml:"useRegistry"`
+	RegistryType    string `yaml:"registryType"`
+	RegistryVersion string `yaml:"registryVersion"`
 
-	UseConfigurationCenter  bool
-	ConfigurationCenterType string
+	UseConfigurationCenter  bool   `yaml:"useConfigurationCenter"`
+	ConfigurationCenterType string `yaml:"configurationCenterType"`
 
-	UseEastWestServiceGovernance               bool
-	EastWestServiceGovernanceType              string
-	UseEastWestServiceGovernanceRateLimit      bool
-	UseEastWestServiceGovernanceCircuitBreaker bool
-	UseEastWestServiceGovernanceOthers         string
+	UseEastWestServiceGovernance               bool   `yaml:"useEastWestServiceGovernance"`
+	EastWestServiceGovernanceType              string `yaml:"eastWestServiceGovernanceType"`
+	UseEastWestServiceGovernanceRateLimit      bool   `yaml:"useEastWestServiceGovernanceRateLimit"`
+	UseEastWestServiceGovernanceCircuitBreaker bool   `yaml:"useEastWestServiceGovernanceCircuitBreaker"`
+	UseEastWestServiceGovernanceOthers         string `yaml:"useEastWestServiceGovernanceOthers"`
 
-	UseGateway      bool
-	GatewayType     string
-	UseGatewayRoute bool
-	UseGatewayCORS  bool
-	UseGatewayAuth  bool
-	UseGatewayJWT   bool
+	UseGateway       bool   `yaml:"useGateway"`
+	GatewayType      string `yaml:"gatewayType"`
+	UseGatewayRoute  bool   `yaml:"useGatewayRoute"`
+	UseGatewayCORS   bool   `yaml:"useGatewayCORS"`
+	UseGatewayAuth   bool   `yaml:"useGatewayAuth"`
+	UseGatewayJWT    bool   `yaml:"useGatewayJWT"`
+	UseGatewayOthers bool   `yaml:"useGatewayOthers"`
 
-	UseTracing  bool
-	TracingType string
+	UseTracing  bool   `yaml:"useTracing"`
+	TracingType string `yaml:"tracingType"`
 
-	UseLogging       bool
-	LoggingType      string
-	UseLoggingApp    bool
-	UseLoggingAccess bool
+	UseLogging       bool   `yaml:"useLogging"`
+	LoggingType      string `yaml:"loggingType"`
+	UseLoggingApp    bool   `yaml:"useLoggingApp"`
+	UseLoggingAccess bool   `yaml:"useLoggingAccess"`
 
-	UseDistributedTransaction  bool
-	DistributedTransactionType string
+	UseDistributedTransaction  bool   `yaml:"useDistributedTransaction"`
+	DistributedTransactionType string `yaml:"distributedTransactionType"`
 
-	EvaluationResult string
+	EvaluationResult string `yaml:"evaluationResult"`
 }

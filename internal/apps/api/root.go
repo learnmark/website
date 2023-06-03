@@ -2,14 +2,17 @@ package api
 
 import (
 	"github.com/gin-gonic/gin"
-	sv "github.com/learnmark/website/internal/services"
+	"github.com/learnmark/website/internal/services"
 )
 
 var Root = root{}
 
-type root struct{}
+type root struct {
+	Version string `json:"version"`
+}
 
-func (c *root) Version(ctx *gin.Context) {
-	s := sv.Context(ctx)
-	s.Json("v1.0.0")
+func (c *root) GetVersion(ctx *gin.Context) {
+	s := services.Context(ctx)
+	c.Version = "v1.0.0"
+	s.Json(c)
 }

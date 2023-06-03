@@ -9,8 +9,10 @@ import (
 func RegisterWebsiteRoute(engine *gin.Engine) {
 	rootPath := "api"
 	rootGroup := engine.Group(rootPath)
-	rootGroup.GET("/version", api.Root.Version)
+	rootGroup.GET("/version", api.Root.GetVersion)
 
 	v1Group := engine.Group(rootPath + "/v1")
-	v1Group.GET("/", v1.V1Root.Root)
+	v1Group.GET("/", v1.Root.Root)
+	v1Group.GET("/consultants", v1.Consultant.List)
+	v1Group.GET("/consultants/:uuid", v1.Consultant.Get)
 }

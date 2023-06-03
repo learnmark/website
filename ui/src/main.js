@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import VueMeta from 'vue-meta';
+import axios from 'axios';
 import App from './App.vue';
 import vuetify from './plugins/vuetify';
 import router from './router';
@@ -26,6 +27,10 @@ if (localStorage.accessToken && localStorage.refreshToken) {
     refreshToken: localStorage.refreshToken
   });
 }
+
+axios.defaults.baseURL = 'http://127.0.0.1:8081/api';
+// axios.defaults.baseURL = 'https://imoogoo.com/api';
+axios.defaults.headers.Authorization = `Bearer ${localStorage.accessToken}`;
 
 new Vue({
   vuetify,
