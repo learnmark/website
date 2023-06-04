@@ -5,8 +5,7 @@ import (
 )
 
 type Base struct {
-	UUID      string
-	DeletedAt time.Time
-	CreatedAt time.Time
-	UpdatedAt time.Time
+	UUID      string    `yaml:"uuid"`
+	CreatedAt time.Time `yaml:"createdAt"`
+	UpdatedAt time.Time `yaml:"updatedAt"`
 }
