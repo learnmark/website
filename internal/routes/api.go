@@ -15,4 +15,8 @@ func RegisterWebsiteRoute(engine *gin.Engine) {
 	v1Group.GET("/", v1.Root.Root)
 	v1Group.GET("/consultants", v1.Consultant.List)
 	v1Group.GET("/consultants/:uuid", v1.Consultant.Get)
+	v1Group.GET("/evaluations", v1.Consultant.Get)
+	v1Group.GET("/evaluations/:uuid", v1.Consultant.Get)
+	v1Group.GET("/evaluations/microservices", v1.Consultant.Get)
+	v1Group.GET("/evaluations/microservices/:uuid", v1.Consultant.Get)
 }
