@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
-import Script from "next/script";
-
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -27,6 +25,9 @@ export default function RootLayout({
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
+        <link rel="icon" href="/favicon.ico" />
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
       </head>
       <body className={inter.className}>
         <Header />

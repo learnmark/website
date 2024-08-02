@@ -14,7 +14,7 @@ export default function Header() {
           <a
             href="/"
             className="flex text-3xl text-white font-medium mb-4 md:mb-0"
-          >NINE4
+          >Learnmark
           </a>
           <button
             className="text-white pb-4 cursor-pointer leading-none px-3 py-1 md:hidden outline-none focus:outline-none content-end ml-auto"
@@ -58,7 +58,7 @@ export default function Header() {
                   "
                 onMouseEnter={() => (setFlyer(!flyer), setFlyerTwo(false))}
               >
-                <span className="tr04">Templates</span>
+                <span className="tr04 text-gray-300 hover:text-white font-semibold">Products</span>
                 <svg
                   className={
                     flyer === true
@@ -93,10 +93,10 @@ export default function Header() {
                     >
                       <div className="ml-4">
                         <p className="text-base font-medium text-white">
-                          NINE4 TEMPLATE #1
+                          GatePoint
                         </p>
                         <p className="mt-1 text-sm text-gray-500">
-                          First Template
+                          Cloud Native Gateway
                         </p>
                       </div>
                     </a>
@@ -106,23 +106,10 @@ export default function Header() {
                     >
                       <div className="ml-4">
                         <p className="text-base font-medium text-white">
-                          NINE4 TEMPLATE #2
+                          Letscrum
                         </p>
                         <p className="mt-1 text-sm text-gray-500">
-                          Second Template
-                        </p>
-                      </div>
-                    </a>
-                    <a
-                      href="/"
-                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800 tr04"
-                    >
-                      <div className="ml-4">
-                        <p className="text-base font-medium text-white">
-                          NINE4 TEMPLATE #3
-                        </p>
-                        <p className="mt-1 text-sm text-gray-500">
-                          Third Template
+                          Agile Project Management
                         </p>
                       </div>
                     </a>
@@ -131,10 +118,10 @@ export default function Header() {
               </div>
             </div>
             <a className="mr-12 md:ml-11 ml-0 cursor-pointer text-gray-300 hover:text-white font-semibold tr04">
-              Pricing
+              Consoulting
             </a>
             <a className="mr-5 cursor-pointer text-gray-300 hover:text-white font-semibold tr04">
-              Careers
+              Pricing
             </a>
           </div>
           <a
