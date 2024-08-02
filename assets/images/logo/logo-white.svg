@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="226" viewBox="0 143 512 226">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        font-size: 164px;
+      }
+
+      .cls-1, .cls-4 {
+        fill: #900;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        font-family: Impact;
+      }
+
+      .cls-2, .cls-3 {
+        fill: #999;
+      }
+
+      .cls-3, .cls-4 {
+        font-size: 288px;
+      }
+    </style>
+  </defs>
+  <text id="earn" class="cls-1" transform="translate(68.89 249.996) scale(0.953)">earn</text>
+  <text id="mar" class="cls-2" transform="translate(105.997 362.46) scale(0.953)">mar</text>
+  <text id="K" class="cls-3" transform="translate(359.411 364.366) scale(0.953)">K</text>
+  <text id="L" class="cls-4" transform="translate(-5.732 363.924) scale(0.953)">L</text>
+</svg>
