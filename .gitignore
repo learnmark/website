@@ -1,26 +1,36 @@
-# Binaries for programs and plugins
-*.exe
-*.exe~
-*.dll
-*.so
-*.dylib
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# Test binary, built with `go test -c`
-*.test
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+.yarn/install-state.gz
 
-# Output of the go coverage tool, specifically when used with LiteIDE
-*.out
+# testing
+/coverage
 
-# Dependency directories (remove the comment below to include it)
-# vendor/
-/.idea
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
 .DS_Store
-assets/upload/*
+*.pem
 
-tools/comp-img/.idea
-tools/comp-img/venv
-tools/comp-img/imgs
-dist/website
-website
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
-data/evaluation/microservices/*.yaml
+# local env files
+.env*.local
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts

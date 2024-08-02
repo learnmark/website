@@ -1,6 +1,0 @@
-app:
-  version: "0.0.1"
-  env: "local"
-session:
-  name: "learnmark-api"
-  secret: "123456"
