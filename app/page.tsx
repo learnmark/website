@@ -12,7 +12,6 @@ import Feedback from '@/components/Feedback';
 import LatestUpdate from '@/components/LatestUpdate';
 import Teams from '@/components/Teams';
 import Customer from '@/components/Customer';
-import Banner from '@/components/Banner';
 import Products from '@/components/Products';
 
 export default function Example() {

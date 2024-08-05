@@ -26,7 +26,7 @@ import Banner from './Banner'
 
 const products = [
   { name: 'GatePoint', description: 'Cloud Native High Performance Gateway!', href: '#', icon: ChartPieIcon },
-  { name: 'Letscrum', description: 'Lighweight Agile & Scrum Project Management System!', href: '#', icon: CursorArrowRaysIcon },
+  { name: 'LetScrum', description: 'Agile & Scrum Project Management System!', href: '#', icon: CursorArrowRaysIcon },
 ]
 
 const solutions = [
@@ -38,8 +38,8 @@ const solutions = [
 ]
 
 const callsToAction = [
-  { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
-  { name: 'Contact sales', href: '#', icon: PhoneIcon },
+  { name: 'Request Demo', href: '#', icon: PlayCircleIcon },
+  { name: 'Contact Sales', href: '#', icon: PhoneIcon },
 ]
 
 const openSource = [
@@ -144,18 +144,6 @@ export default function Example() {
                   </div>
                 ))}
               </div>
-              <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
-                {callsToAction.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
-                  >
-                    <item.icon aria-hidden="true" className="h-5 w-5 flex-none text-gray-400" />
-                    {item.name}
-                  </a>
-                ))}
-              </div>
             </PopoverPanel>
           </Popover>
 
@@ -190,18 +178,6 @@ export default function Example() {
                       <p className="mt-1 text-gray-600">{item.description}</p>
                     </div>
                   </div>
-                ))}
-              </div>
-              <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
-                {callsToAction.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
-                  >
-                    <item.icon aria-hidden="true" className="h-5 w-5 flex-none text-gray-400" />
-                    {item.name}
-                  </a>
                 ))}
               </div>
             </PopoverPanel>
