@@ -11,14 +11,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: 'https://learnmark.com/about',
       lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
+      changeFrequency: 'yearly',
+      priority: 1,
     },
     {
-      url: 'https://learnmark.com/contact',
+      url: 'https://learnmark.com/gatepoint',
       lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.5,
+      changeFrequency: 'yearly',
+      priority: 1,
+    },
+    {
+      url: 'https://learnmark.com/letscrum',
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 1,
     },
   ]
 }
