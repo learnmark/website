@@ -25,8 +25,8 @@ import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/
 import Banner from './Banner'
 
 const products = [
-  { name: 'GatePoint', description: 'Cloud Native High Performance Gateway!', href: '#', icon: ChartPieIcon },
-  { name: 'LetScrum', description: 'Agile & Scrum Project Management System!', href: '#', icon: CursorArrowRaysIcon },
+  { name: 'GatePoint', description: 'Cloud Native High Performance Gateway!', href: '/gatepoint', icon: ChartPieIcon },
+  { name: 'LetScrum', description: 'Agile & Scrum Project Management System!', href: '/letscrum', icon: CursorArrowRaysIcon },
 ]
 
 const solutions = [
@@ -38,8 +38,8 @@ const solutions = [
 ]
 
 const callsToAction = [
-  { name: 'Request Demo', href: '#', icon: PlayCircleIcon },
-  { name: 'Contact Sales', href: '#', icon: PhoneIcon },
+  { name: 'Request Demo', href: '/contact', icon: PlayCircleIcon },
+  { name: 'Contact Sales', href: '/contact', icon: PhoneIcon },
 ]
 
 const openSource = [
@@ -56,7 +56,7 @@ export default function Example() {
         <div className="flex lg:flex-1">
           <a href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Learnmark</span>
-            <img alt="" src="/logo.svg?color=indigo&shade=600" className="h-8 w-auto" />
+            <img alt="Learnmark Logo" src="/logo.svg?color=indigo&shade=600" className="h-8 w-auto" />
           </a>
         </div>
         <div className="flex lg:hidden">
@@ -187,12 +187,9 @@ export default function Example() {
           </a>
         </PopoverGroup>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          {/* <a href="/contact" className="text-sm font-semibold leading-6 text-gray-900">
-            Contact Us
-          </a> */}
           <a
             href="/contact"
-            className="rounded-md bg-red-900 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-darkred-600"
+            className="rounded-full bg-red-800 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-darkred-900"
           >
             Contact Us
           </a>
@@ -246,7 +243,7 @@ export default function Example() {
                     <ChevronDownIcon aria-hidden="true" className="h-5 w-5 flex-none group-data-[open]:rotate-180" />
                   </DisclosureButton>
                   <DisclosurePanel className="mt-2 space-y-2">
-                    {[...solutions, ...callsToAction].map((item) => (
+                    {[...solutions].map((item) => (
                       <DisclosureButton
                         key={item.name}
                         as="a"
@@ -259,7 +256,7 @@ export default function Example() {
                   </DisclosurePanel>
                 </Disclosure>
                 <a
-                  href="#"
+                  href="/pricing"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Pricing
@@ -270,7 +267,7 @@ export default function Example() {
                     <ChevronDownIcon aria-hidden="true" className="h-5 w-5 flex-none group-data-[open]:rotate-180" />
                   </DisclosureButton>
                   <DisclosurePanel className="mt-2 space-y-2">
-                    {[...openSource, ...callsToAction].map((item) => (
+                    {[...openSource].map((item) => (
                       <DisclosureButton
                         key={item.name}
                         as="a"
@@ -283,7 +280,7 @@ export default function Example() {
                   </DisclosurePanel>
                 </Disclosure>
                 <a
-                  href="#"
+                  href="/about"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   About Us
@@ -291,7 +288,7 @@ export default function Example() {
               </div>
               <div className="py-6">
                 <a
-                  href="#"
+                  href="/contact"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Contact Us

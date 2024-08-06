@@ -15,6 +15,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
+      url: 'https://learnmark.com/contact',
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 1,
+    },
+    {
       url: 'https://learnmark.com/gatepoint',
       lastModified: new Date(),
       changeFrequency: 'yearly',
