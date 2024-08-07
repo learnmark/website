@@ -20,17 +20,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'yearly',
       priority: 1,
     },
-    {
-      url: 'https://learnmark.com/gatepoint',
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 1,
-    },
-    {
-      url: 'https://learnmark.com/letscrum',
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 1,
-    },
   ]
 }

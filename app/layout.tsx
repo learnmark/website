@@ -22,12 +22,12 @@ export default function RootLayout({
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         <link rel="icon" href="/favicon.ico" />
-        <title>Learnmark - Lead Cloud Native Consulting and Solutions!</title>
+        <title>Learnmark - Leading Cloud-based Products and Solutions!</title>
         <meta name="description" content='Learnmark - Lead Cloud Native Consulting and Solutions!' />
       </head>
       <body className={inter.className}>
         <Header />
-        <div>{children}</div>
+        {children}
         <Footer />
       </body>
     </html>

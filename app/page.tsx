@@ -6,13 +6,12 @@ import Intro from "@/components/Intro";
 import Feature from "@/components/Feature";
 import CTA from '@/components/CTA';
 import WorkWith from '@/components/WorkWith';
-import News from '@/components/News';
 import Stats from '@/components/Stats';
 import Feedback from '@/components/Feedback';
 import LatestUpdate from '@/components/LatestUpdate';
-import Teams from '@/components/Teams';
+import Team from '@/components/Team';
 import Customer from '@/components/Customer';
-import Products from '@/components/Products';
+import Subscribe from '@/components/Subscribe';
 
 export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -24,12 +23,11 @@ export default function Example() {
       <CTA></CTA>
       <WorkWith></WorkWith>
       <Stats></Stats>
-      <News></News>
       <Feedback></Feedback>
       <LatestUpdate></LatestUpdate>
-      <Teams></Teams>
+      <Team></Team>
       <Customer></Customer>
-      <Products></Products>
+      <Subscribe></Subscribe>
     </>
   )
 }
