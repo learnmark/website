@@ -19,14 +19,14 @@ export default function Example() {
   return (
     <>
       <Intro></Intro>
-      <Feature></Feature>
-      <CTA></CTA>
+      {/* <Feature></Feature>
+      <CTA></CTA> */}
       <WorkWith></WorkWith>
       <Stats></Stats>
       <Feedback></Feedback>
-      <LatestUpdate></LatestUpdate>
-      <Team></Team>
-      <Customer></Customer>
+      {/* <LatestUpdate></LatestUpdate> */}
+      {/* <Team></Team>
+      <Customer></Customer> */}
       <Subscribe></Subscribe>
     </>
   )
