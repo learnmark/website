@@ -47,4 +47,4 @@ jobs:
             docker rm learnmark
             docker image rm learnmark/website:latest
             docker pull learnmark/website:latest
-            docker run -d --name learnmark -p 90:80 learnmark/website:latest
+            docker run -d --name learnmark -p 90:3000 learnmark/website:latest
