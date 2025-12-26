@@ -29,7 +29,6 @@ const commingSoon = [
 ]
 
 const products = [
-  { name: 'GatePoint', description: 'Cloud Native High Performance Gateway!', href: '/gatepoint', icon: ChartPieIcon },
   { name: 'LetScrum', description: 'Agile & Scrum Project Management System!', href: '/letscrum', icon: CursorArrowRaysIcon },
 ]
 
@@ -47,7 +46,6 @@ const callsToAction = [
 ]
 
 const openSource = [
-  { name: 'GatePoint', description: 'Cloud Native High Performance Gateway!', href: '#', icon: ChartPieIcon },
   { name: 'Letscrum', description: 'Lighweight Agile & Scrum Project Management System!', href: '#', icon: CursorArrowRaysIcon },
 ]
 
