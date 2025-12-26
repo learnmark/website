@@ -60,15 +60,20 @@ To build and run the application using Docker:
     docker build -t learnmark-website .
     ```
 
-2.  Run the container:
+2.  Run the container (with data persistence):
 
     ```bash
-    docker run -p 3000:3000 learnmark-website
+    docker run -p 3000:3000 -v $(pwd)/data:/app/data learnmark-website
     ```
+
+    *Note: Mounting the volume ensures that contact form submissions and newsletter subscriptions are saved to your local `data` directory and persist across container restarts.*
 
 ## Deployment
 
 The application is optimized for deployment on Vercel or any container orchestration platform (Kubernetes, ECS, etc.) using the provided Dockerfile.
+
+**Important Note for Vercel/Serverless:**
+The current implementation uses the local filesystem (`/data`) to store form submissions. This **will not work** on serverless platforms like Vercel where the filesystem is ephemeral. For serverless deployments, please update the API routes (`app/api/*`) to use an external database (e.g., MongoDB, PostgreSQL) or an email service.
 
 ## Learn More
 
