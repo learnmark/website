@@ -21,9 +21,54 @@ import Background from "@/components/Background";
 
 export default function Example() {
   const [agreed, setAgreed] = useState(false);
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    company: "",
+    email: "",
+    interest: "Please Select",
+  });
+  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
 
   const handleChange = () => {
     setAgreed(!agreed);
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus("submitting");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setStatus("success");
+        setFormData({
+          firstName: "",
+          lastName: "",
+          company: "",
+          email: "",
+          interest: "Please Select",
+        });
+        setAgreed(false);
+      } else {
+        setStatus("error");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setStatus("error");
+    }
   };
 
   return (
@@ -38,8 +83,7 @@ export default function Example() {
         </p>
       </div>
       <form
-        action="#"
-        method="POST"
+        onSubmit={handleSubmit}
         className="mx-auto mt-16 max-w-xl sm:mt-20"
       >
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
@@ -53,9 +97,12 @@ export default function Example() {
             <div className="mt-2.5">
               <input
                 id="first-name"
-                name="first-name"
+                name="firstName"
                 type="text"
                 autoComplete="given-name"
+                value={formData.firstName}
+                onChange={handleInputChange}
+                required
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
@@ -70,9 +117,12 @@ export default function Example() {
             <div className="mt-2.5">
               <input
                 id="last-name"
-                name="last-name"
+                name="lastName"
                 type="text"
                 autoComplete="family-name"
+                value={formData.lastName}
+                onChange={handleInputChange}
+                required
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
@@ -90,6 +140,8 @@ export default function Example() {
                 name="company"
                 type="text"
                 autoComplete="organization"
+                value={formData.company}
+                onChange={handleInputChange}
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
@@ -107,6 +159,9 @@ export default function Example() {
                 name="email"
                 type="email"
                 autoComplete="email"
+                value={formData.email}
+                onChange={handleInputChange}
+                required
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
@@ -122,6 +177,8 @@ export default function Example() {
               <select
                 id="interest"
                 name="interest"
+                value={formData.interest}
+                onChange={handleInputChange}
                 className="block w-full rounded-md border-0 pl-3.5 pr-9 py-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               >
                 <option disabled>Please Select</option>
@@ -161,12 +218,22 @@ export default function Example() {
         <div className="mt-10">
           <button
             type="submit"
-            disabled={!agreed}
-            className="disabled:bg-gray-500 block w-full rounded-md bg-red-800 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-red-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-900"
+            disabled={!agreed || status === "submitting"}
+            className="disabled:bg-gray-500 block w-full rounded-md bg-red-800 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-red-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-900 transition-all duration-300"
           >
-            Submit
+            {status === "submitting" ? "Submitting..." : "Submit"}
           </button>
         </div>
+        {status === "success" && (
+          <div className="mt-4 p-4 text-sm text-green-700 bg-green-100 rounded-md">
+            Thank you! Your message has been sent successfully.
+          </div>
+        )}
+        {status === "error" && (
+          <div className="mt-4 p-4 text-sm text-red-700 bg-red-100 rounded-md">
+            Something went wrong. Please try again later.
+          </div>
+        )}
       </form>
     </div>
   );
