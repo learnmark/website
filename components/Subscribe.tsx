@@ -14,10 +14,11 @@ export default function Subscribe() {
     setMessage('')
 
     try {
-      const response = await fetch('/api/subscribe', {
+      const response = await fetch('https://formspree.io/f/xkonnbdr', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Accept': 'application/json'
         },
         body: JSON.stringify({ email }),
       })
@@ -30,7 +31,7 @@ export default function Subscribe() {
         setEmail('')
       } else {
         setStatus('error')
-        setMessage(data.message || 'Something went wrong. Please try again.')
+        setMessage(data.error || 'Something went wrong. Please try again.')
       }
     } catch (error) {
       setStatus('error')
