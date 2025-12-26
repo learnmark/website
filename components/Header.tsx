@@ -33,11 +33,11 @@ const products = [
 ]
 
 const solutions = [
-  { name: 'Microservices', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
-  { name: 'Gateway', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-  { name: 'Agile & Scrum', description: 'Your customers’ data will be safe and secure', href: '#', icon: FingerPrintIcon },
-  { name: 'DevOps', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
-  { name: 'AI', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
+  { name: 'AI', description: 'Leverage artificial intelligence to drive business innovation.', href: '/solutions/ai', icon: ArrowPathIcon },
+  { name: 'Microservices', description: 'Architect scalable and resilient systems with microservices.', href: '/solutions/microservices', icon: ChartPieIcon },
+  { name: 'Gateway', description: 'Secure and manage your API traffic efficiently.', href: '/solutions/gateway', icon: CursorArrowRaysIcon },
+  { name: 'Agile & Scrum', description: 'Accelerate delivery with proven Agile and Scrum methodologies.', href: '/solutions/agile-scrum', icon: FingerPrintIcon },
+  { name: 'DevOps', description: 'Streamline development and operations for faster deployment.', href: '/solutions/devops', icon: SquaresPlusIcon },
 ]
 
 const callsToAction = [
@@ -73,7 +73,7 @@ export default function Example() {
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
           <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
+            <PopoverButton className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 focus:outline-none">
               Products
               <ChevronDownIcon aria-hidden="true" className="h-5 w-5 flex-none text-gray-400" />
             </PopoverButton>
@@ -117,7 +117,7 @@ export default function Example() {
           </Popover>
 
           <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
+            <PopoverButton className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 focus:outline-none">
               Solutions
               <ChevronDownIcon aria-hidden="true" className="h-5 w-5 flex-none text-gray-400" />
             </PopoverButton>
@@ -127,7 +127,7 @@ export default function Example() {
               className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
             >
               <div className="p-4">
-                {commingSoon.map((item) => (
+                {solutions.map((item) => (
                   <div
                     key={item.name}
                     className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
@@ -153,7 +153,7 @@ export default function Example() {
           </a>
           
           <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
+            <PopoverButton className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 focus:outline-none">
               Open Source
               <ChevronDownIcon aria-hidden="true" className="h-5 w-5 flex-none text-gray-400" />
             </PopoverButton>
@@ -245,7 +245,7 @@ export default function Example() {
                     <ChevronDownIcon aria-hidden="true" className="h-5 w-5 flex-none group-data-[open]:rotate-180" />
                   </DisclosureButton>
                   <DisclosurePanel className="mt-2 space-y-2">
-                    {[...commingSoon].map((item) => (
+                    {[...solutions].map((item) => (
                       <DisclosureButton
                         key={item.name}
                         as="a"
