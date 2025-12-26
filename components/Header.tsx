@@ -46,7 +46,7 @@ const callsToAction = [
 ]
 
 const openSource = [
-  { name: 'Letscrum', description: 'Lighweight Agile & Scrum Project Management System!', href: '#', icon: CursorArrowRaysIcon },
+  { name: 'LetScrum', description: 'Lighweight Agile & Scrum Project Management System!', href: 'https://github.com/letscrum', icon: CursorArrowRaysIcon },
 ]
 
 export default function Example() {
@@ -163,7 +163,7 @@ export default function Example() {
               className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
             >
               <div className="p-4">
-                {commingSoon.map((item) => (
+                {openSource.map((item) => (
                   <div
                     key={item.name}
                     className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
@@ -172,7 +172,7 @@ export default function Example() {
                       <item.icon aria-hidden="true" className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" />
                     </div> */}
                     <div className="flex-auto">
-                      <a href={item.href} className="block font-semibold text-gray-900">
+                      <a href={item.href} target="_blank" className="block font-semibold text-gray-900">
                         {item.name}
                         <span className="absolute inset-0" />
                       </a>
@@ -269,11 +269,12 @@ export default function Example() {
                     <ChevronDownIcon aria-hidden="true" className="h-5 w-5 flex-none group-data-[open]:rotate-180" />
                   </DisclosureButton>
                   <DisclosurePanel className="mt-2 space-y-2">
-                    {[...commingSoon].map((item) => (
+                    {[...openSource].map((item) => (
                       <DisclosureButton
                         key={item.name}
                         as="a"
                         href={item.href}
+                        target="_blank"
                         className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                       >
                         {item.name}
@@ -291,7 +292,7 @@ export default function Example() {
               <div className="py-6">
                 <a
                   href="/contact"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white bg-primary-800 hover:bg-primary-700"
+                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 !text-white bg-primary-800 hover:bg-primary-700"
                 >
                   Contact Us
                 </a>

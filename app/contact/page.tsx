@@ -218,7 +218,7 @@ export default function Example() {
           <button
             type="submit"
             disabled={!agreed || status === "submitting"}
-            className="disabled:bg-gray-500 block w-full rounded-md bg-red-800 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-red-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-900 transition-all duration-300"
+            className="disabled:bg-gray-500 block w-full rounded-md bg-primary-800 px-3.5 py-2.5 text-center text-sm font-semibold !text-white shadow-sm hover:bg-primary-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-900 transition-all duration-300"
           >
             {status === "submitting" ? "Submitting..." : "Submit"}
           </button>
