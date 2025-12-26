@@ -27,14 +27,14 @@ export default function Intro() {
             Focused on transforming technology into valuable applications, leading the best practices of cloud computing in enterprises!
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
-            {/* <a
-              href="#"
-              className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            <a
+              href="/about"
+              className="rounded-md bg-primary-800 px-3.5 py-2.5 text-sm font-semibold !text-white shadow-sm hover:bg-primary-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-800 transition-all duration-300"
             >
-              Get started
-            </a> */}
-            <a href="/about" className="text-sm font-semibold leading-6 text-gray-900">
-              Learn more about us <span aria-hidden="true">→</span>
+              Learn more about us
+            </a>
+            <a href="/contact" className="text-sm font-semibold leading-6 text-gray-900 hover:text-primary-800 transition-colors">
+              Contact Sales <span aria-hidden="true">→</span>
             </a>
           </div>
         </div>

@@ -45,14 +45,14 @@ export default function WorkWith() {
         <div className="mx-auto mt-5 max-w-2xl lg:mx-0 lg:max-w-none">
           <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-base font-semibold leading-7 text-white sm:grid-cols-2 md:flex lg:gap-x-10">
             {links.map((link) => (
-              <a key={link.name} href={link.href}>
+              <a key={link.name} href={link.href} className="hover:text-primary-300 transition-colors duration-300 flex items-center gap-x-2">
                 {link.name} <span aria-hidden="true">&rarr;</span>
               </a>
             ))}
           </div>
           <dl className="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
             {stats.map((stat) => (
-              <div key={stat.name} className="flex flex-col-reverse">
+              <div key={stat.name} className="flex flex-col-reverse border-l border-white/20 pl-6 hover:border-primary-500 transition-colors duration-300">
                 <dt className="text-base leading-7 text-gray-300">{stat.name}</dt>
                 <dd className="text-2xl font-bold leading-9 tracking-tight text-white">{stat.value}</dd>
               </div>
