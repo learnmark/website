@@ -45,8 +45,8 @@ export default function Footer() {
               </h2>
               <ul className="text-gray-600">
                 <li className="mb-4">
-                  <a href="#" className="hover:underline ">
-                    Comming Soon
+                  <a href="/letscrum" className="hover:underline ">
+                    LetScrum
                   </a>
                 </li>
               </ul>
@@ -57,8 +57,28 @@ export default function Footer() {
               </h2>
               <ul className="text-gray-600">
                 <li className="mb-4">
-                  <a href="#" className="hover:underline">
-                    Comming Soon
+                  <a href="/solutions/ai" className="hover:underline">
+                    AI Consulting
+                  </a>
+                </li>
+                <li className="mb-4">
+                  <a href="/solutions/microservices" className="hover:underline">
+                    Microservices
+                  </a>
+                </li>
+                <li className="mb-4">
+                  <a href="/solutions/gateway" className="hover:underline">
+                    Gateway
+                  </a>
+                </li>
+                <li className="mb-4">
+                  <a href="/solutions/agile-scrum" className="hover:underline">
+                    Agile & Scrum
+                  </a>
+                </li>
+                <li className="mb-4">
+                  <a href="/solutions/devops" className="hover:underline">
+                    DevOps
                   </a>
                 </li>
               </ul>

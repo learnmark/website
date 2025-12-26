@@ -2,7 +2,7 @@ import Background from "@/components/Background"
 
 export default function Gateway() {
   return (
-    <div className="py-24 sm:py-32">
+    <div className="relative isolate py-24 sm:py-32">
       <Background />
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">

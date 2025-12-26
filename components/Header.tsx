@@ -83,7 +83,7 @@ export default function Example() {
               className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
             >
               <div className="p-4">
-                {commingSoon.map((item) => (
+                {products.map((item) => (
                   <div
                     key={item.name}
                     className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
@@ -227,7 +227,7 @@ export default function Example() {
                     <ChevronDownIcon aria-hidden="true" className="h-5 w-5 flex-none group-data-[open]:rotate-180" />
                   </DisclosureButton>
                   <DisclosurePanel className="mt-2 space-y-2">
-                    {[...commingSoon].map((item) => (
+                    {[...products].map((item) => (
                       <DisclosureButton
                         key={item.name}
                         as="a"
