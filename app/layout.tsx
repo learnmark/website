@@ -9,6 +9,32 @@ import Banner from "@/components/Banner";
 
 const inter = Inter({ subsets: ["latin"] });
 
+export const metadata: Metadata = {
+  metadataBase: new URL('https://learnmark.com'),
+  title: {
+    template: '%s | Learnmark',
+    default: 'Learnmark - Leading Cloud-based Products and Solutions',
+  },
+  description: 'Learnmark provides leading cloud-native consulting, products, and solutions to help enterprises transform their technology.',
+  openGraph: {
+    title: 'Learnmark - Leading Cloud-based Products and Solutions',
+    description: 'Learnmark provides leading cloud-native consulting, products, and solutions to help enterprises transform their technology.',
+    url: 'https://learnmark.com',
+    siteName: 'Learnmark',
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Learnmark - Leading Cloud-based Products and Solutions',
+    description: 'Learnmark provides leading cloud-native consulting, products, and solutions.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -16,16 +42,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <meta charSet="utf-8" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
-        <link rel="icon" href="/favicon.ico" />
-        <title>Learnmark - Leading Cloud-based Products and Solutions!</title>
-        <meta name="description" content='Learnmark - Lead Cloud Native Consulting and Solutions!' />
-      </head>
       <body className={inter.className}>
         <Header />
         {children}

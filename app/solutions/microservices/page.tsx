@@ -1,4 +1,10 @@
 import Background from "@/components/Background"
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Microservices Architecture',
+  description: 'Architect scalable and resilient systems with our microservices consulting and implementation services.',
+}
 
 export default function Microservices() {
   return (

@@ -1,5 +1,11 @@
 import { CloudArrowUpIcon, LockClosedIcon, ServerIcon, ChartBarIcon, UserGroupIcon, ClipboardDocumentCheckIcon } from '@heroicons/react/20/solid'
 import Background from "@/components/Background"
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'LetScrum - Agile & Scrum Project Management System',
+  description: 'A lightweight, cloud-native Agile & Scrum project management system designed to help teams collaborate effectively and deliver value faster.',
+}
 
 export default function Example() {
   return (

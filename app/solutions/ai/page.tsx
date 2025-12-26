@@ -1,4 +1,10 @@
 import Background from "@/components/Background"
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'AI Consulting',
+  description: 'Leverage artificial intelligence to drive business innovation with our expert consulting services.',
+}
 
 export default function AI() {
   return (

@@ -1,4 +1,10 @@
 import Background from "@/components/Background"
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Careers',
+  description: 'Join our team and help us build the future of cloud-native technology.',
+}
 
   const stats = [
     { name: 'Roles are hiring', value: '5' },
@@ -120,87 +126,124 @@ import Background from "@/components/Background"
   
   export default function Careers() {
     return (
-      <div className="relative isolate overflow-hidden py-24 sm:py-32">
+      <div className="relative isolate overflow-hidden bg-white py-24 sm:py-32">
         <Background />
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto">
-            <h2 className="text-4xl font-bold tracking-tight sm:text-6xl">Work with us</h2>
+          <div className="mx-auto max-w-2xl lg:mx-0">
+            <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Join our team</h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              We invite you to embark on an exciting professional journey by working with us, where you’ll have the opportunity to collaborate with a talented and diverse team, contribute to innovative projects, and develop your skills in a dynamic and supportive environment.
+              We invite you to embark on an exciting professional journey by working with us. Collaborate with a talented and diverse team, contribute to innovative projects, and develop your skills in a dynamic and supportive environment.
             </p>
           </div>
-          <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
-            <dl className="grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mx-auto mt-16 max-w-2xl lg:mx-0 lg:max-w-none">
+            <dl className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
               {stats.map((stat) => (
-                <div key={stat.name} className="flex flex-col-reverse">
+                <div key={stat.name} className="flex flex-col-reverse pl-4 border-l-4 border-primary-600">
                   <dt className="text-base leading-7 text-gray-600">{stat.name}</dt>
-                  <dd className="text-2xl font-bold leading-9 tracking-tight">{stat.value}</dd>
+                  <dd className="text-2xl font-bold leading-9 tracking-tight text-gray-900">{stat.value}</dd>
                 </div>
               ))}
             </dl>
           </div>
-          {/* a hr for split below section */}
-          <hr className="mt-16 border-t border-gray-200" />
-
-          {/* below are open positions section */}
-          <div className="mx-auto mt-16 max-w-7xl">
-            <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
-              <a id="open-roles">
-                Open Roles
-              </a>
+          
+          <div className="mt-24 border-t border-gray-200 pt-16">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl" id="open-roles">
+              Open Roles
             </h2>
             <p className="mt-4 text-lg leading-8 text-gray-600">
               We are looking for talented individuals to join our team. If you are passionate about technology and want to work on exciting projects, we would love to hear from you.
             </p>
-            <div className="flex flex-wrap mt-6">
-            {openRoles.map((role) => (
-              <a key={role.name} href={role.href}
-              className="mx-2 text-lg font-semibold text-red-800 hover:text-red-700"
-              >
-                {role.name}
-              </a>
-            ))}
+            
+            <div className="mt-10 flex flex-wrap gap-4">
+              {openRoles.map((role) => (
+                <a 
+                  key={role.name} 
+                  href={role.href}
+                  className="rounded-full bg-primary-50 px-4 py-2.5 text-sm font-semibold text-primary-700 shadow-sm hover:bg-primary-100 transition-colors duration-200"
+                >
+                  {role.name}
+                </a>
+              ))}
             </div>
           </div>
 
-          <div className="mx-auto mt-16 max-w-4xl">
+          <div className="mt-16 space-y-20">
             {jobDescriptions.map((job) => (
-              <div key={job.title} className="mx-auto mt-16 max-w-7xl">
-                <h3 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
-                  <a id={job.href}>
+              <div key={job.title} id={job.href} className="scroll-mt-24 rounded-2xl bg-gray-50 p-8 sm:p-10 ring-1 ring-gray-900/5">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                  <h3 className="text-2xl font-bold tracking-tight text-gray-900">
                     {job.title}
-                  </a>
-                </h3>
-                <p className="mt-4 text-lg leading-8 text-gray-600">
-                  {job.location} | {job.employmentType}
-                </p>
-                <div className="mt-6">
-                  <h4 className="text-lg font-semibold text-gray-900">Responsibilities</h4>
-                  <ul className="mt-2 list-disc list-inside text-gray-600">
-                    {job.responsibilities.map((responsibility) => (
-                      <li key={responsibility}>{responsibility}</li>
-                    ))}
-                  </ul>
+                  </h3>
+                  <div className="flex items-center gap-x-4 text-sm">
+                    <span className="inline-flex items-center rounded-md bg-white px-2 py-1 font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+                      {job.location}
+                    </span>
+                    <span className="inline-flex items-center rounded-md bg-white px-2 py-1 font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+                      {job.employmentType}
+                    </span>
+                  </div>
                 </div>
-                <div className="mt-6">
-                  <h4 className="text-lg font-semibold text-gray-900">Qualifications</h4>
-                  <ul className="mt-2 list-disc list-inside text-gray-600">
-                    {job.qualifications.map((qualification) => (
-                      <li key={qualification}>{qualification}</li>
-                    ))}
-                  </ul>
+                
+                <div className="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-2">
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 flex items-center gap-2">
+                      <span className="h-1.5 w-1.5 rounded-full bg-primary-600"></span>
+                      Responsibilities
+                    </h4>
+                    <ul className="mt-4 space-y-3 text-gray-600">
+                      {job.responsibilities.map((responsibility) => (
+                        <li key={responsibility} className="flex gap-3">
+                          <span className="text-primary-600">•</span>
+                          <span>{responsibility}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 flex items-center gap-2">
+                      <span className="h-1.5 w-1.5 rounded-full bg-primary-600"></span>
+                      Qualifications
+                    </h4>
+                    <ul className="mt-4 space-y-3 text-gray-600">
+                      {job.qualifications.map((qualification) => (
+                        <li key={qualification} className="flex gap-3">
+                          <span className="text-primary-600">•</span>
+                          <span>{qualification}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+                
+                <div className="mt-8 pt-8 border-t border-gray-200/60">
+                  <a 
+                    href={`mailto:hr@learnmark.com?subject=Application for ${job.title}`}
+                    className="text-sm font-semibold leading-6 text-primary-600 hover:text-primary-500"
+                  >
+                    Apply for this role <span aria-hidden="true">→</span>
+                  </a>
                 </div>
               </div>
-              ))}
+            ))}
           </div>
-          {/* submit resume section */}
-          <div className="mx-auto mt-16 max-w-4xl">
-            <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
-              Submit Your Resume
-            </h2>
-            <p className="mt-4 text-lg leading-8 text-gray-600">
-              If you are interested in any of the open roles, please submit your resume to <a href="mailto:hr@learnmark.com" className="text-red-800 hover:text-red-700">hr@learnmark.com</a>.
-            </p>
+
+          <div className="mt-24 rounded-2xl bg-primary-900 py-16 px-6 sm:p-16 lg:flex lg:items-center lg:justify-between">
+            <div className="max-w-xl">
+              <h2 className="text-3xl font-bold tracking-tight text-white">
+                Don't see a role that fits?
+              </h2>
+              <p className="mt-4 text-lg text-primary-100">
+                We are always looking for talented individuals. Send us your resume and we'll keep you in mind for future openings.
+              </p>
+            </div>
+            <div className="mt-10 flex items-center gap-x-6 lg:mt-0 lg:flex-shrink-0">
+              <a
+                href="mailto:hr@learnmark.com"
+                className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-primary-900 shadow-sm hover:bg-primary-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              >
+                Email HR
+              </a>
+            </div>
           </div>
             
         </div>

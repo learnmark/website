@@ -1,5 +1,11 @@
 import { CheckIcon } from '@heroicons/react/20/solid'
 import Background from "@/components/Background";
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Pricing',
+  description: 'Simple and transparent pricing for our products and services.',
+}
 
 const includedFeatures = [
   'Private forum access',

@@ -1,4 +1,10 @@
 import Background from "@/components/Background"
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'About Us',
+  description: 'Learn about Learnmark, our mission, values, and the team dedicated to transforming enterprise technology.',
+}
 
 const people = [
   {

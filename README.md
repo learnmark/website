@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Learnmark Website
+
+This is the official website for Learnmark, built with [Next.js 16](https://nextjs.org/) and [Tailwind CSS v4](https://tailwindcss.com/).
+
+## Features
+
+- **Modern Tech Stack**: Built on Next.js 16 (App Router) and React 19.
+- **Responsive Design**: Fully responsive UI using Tailwind CSS v4 and Headless UI.
+- **Dynamic Components**: Reusable components for Header, Footer, Features, CTA, etc.
+- **API Routes**:
+  - `/api/contact`: Handles contact form submissions.
+  - `/api/subscribe`: Handles newsletter subscriptions.
+  - Data is currently stored locally in JSON files (`data/`).
+- **Dockerized**: Includes optimized `Dockerfile` for production deployment.
+
+## Project Structure
+
+```
+├── app/                # App Router pages and API routes
+│   ├── api/            # Backend API endpoints
+│   ├── about/          # About page
+│   ├── letscrum/       # Product page
+│   ├── solutions/      # Solution pages
+│   └── ...
+├── components/         # Reusable React components
+├── data/               # Local storage for form submissions (JSON)
+├── public/             # Static assets
+└── ...
+```
 
 ## Getting Started
 
-First, run the development server:
+### Local Development
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1.  Install dependencies:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+    ```bash
+    npm install
+    # or
+    yarn install
+    ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2.  Run the development server:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+    ```bash
+    npm run dev
+    # or
+    yarn dev
+    ```
+
+3.  Open [http://localhost:3000](http://localhost:3000) with your browser.
+
+### Docker Build
+
+To build and run the application using Docker:
+
+1.  Build the image:
+
+    ```bash
+    docker build -t learnmark-website .
+    ```
+
+2.  Run the container:
+
+    ```bash
+    docker run -p 3000:3000 learnmark-website
+    ```
+
+## Deployment
+
+The application is optimized for deployment on Vercel or any container orchestration platform (Kubernetes, ECS, etc.) using the provided Dockerfile.
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
